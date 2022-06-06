@@ -1,7 +1,0 @@
-[
-	{
-		"button": "button1",
-		"modifiers": ["command"],
-		"press_command": "open_context_url"
-	}
-]

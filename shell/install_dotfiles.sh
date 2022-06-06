@@ -25,14 +25,12 @@ function brew_install() {
   _maybe_brew_cask_install "iterm2" # best terminal 
   _maybe_brew_cask_install "fork" # amazing git client
   _maybe_brew_cask_install "sublime-text" # amazing text editor
-  _maybe_brew_cask_install "sublime-merge" # another amazing git client
-  _maybe_brew_cask_install "visual-studio-code" 
+  _maybe_brew_cask_install "visual-studio-code" # best merge tool
   _maybe_brew_cask_install "paw" # api tool (http client and more)
   _maybe_brew_cask_install "transmission" # torrent client 
   _maybe_brew_cask_install "discord"
   _maybe_brew_cask_install "slack"
   _maybe_brew_cask_install "dash" # search docks like a king
-  _maybe_brew_cask_install "obsidian" # knowledge base editor
   _maybe_brew_cask_install "spotify" # music
   _maybe_brew_cask_install "netnewswire" # Nice open-source RSS client for macOS/iOS
 
@@ -56,7 +54,7 @@ function brew_install() {
   _maybe_brew_install "git-delta" # syntax-highlighting pager for git, diff, and grep output
 
   # App Store 
-  _mas_install "1569600264" # Pandan. Time Tracking app
+  # _mas_install "1569600264" # Pandan. Time Tracking app
 }
 
 function tools_install() {
@@ -119,7 +117,7 @@ function additional_setup() {
   # Generate ssh key
   (
     cd ~/.ssh \
-      && ssh-keygen -t ecdsa -C "cool45akol@gmail.com" \
+      && ssh-keygen -t ecdsa -C "id.maximkrouk@gmail.com" \
       && cat id_ecdsa.pub | pbcopy \
       && _print_warning "Go to https://github.com/settings/keys and register SSH key from pasteboard"
   )

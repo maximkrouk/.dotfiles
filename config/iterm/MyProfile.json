@@ -1,5 +1,5 @@
 {
-  "Working Directory" : "\/Users\/japanese_goblinn\/Downloads",
+  "Working Directory" : "\/Users\/maximkrouk\/Downloads",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
     "Red Component" : 0,
@@ -72,7 +72,7 @@
     "Green Component" : 0.9268307089805603
   },
   "BM Growl" : true,
-  "AWDS Window Directory" : "\/Users\/japanese_goblinn\/Downloads",
+  "AWDS Window Directory" : "\/Users\/maximkrouk\/Downloads",
   "Icon" : 1,
   "Ansi 3 Color" : {
     "Red Component" : 1,
@@ -454,7 +454,7 @@
     "Alpha Component" : 1,
     "Green Component" : 1
   },
-  "AWDS Tab Directory" : "\/Users\/japanese_goblinn\/Downloads",
+  "AWDS Tab Directory" : "\/Users\/maximkrouk\/Downloads",
   "AWDS Pane Option" : "Recycle",
   "Command" : "",
   "Terminal Type" : "xterm-256color",

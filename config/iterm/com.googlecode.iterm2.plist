@@ -2837,11 +2837,11 @@
 			<key>AWDS Pane Option</key>
 			<string>Recycle</string>
 			<key>AWDS Tab Directory</key>
-			<string>/Users/japanese_goblinn/Downloads</string>
+			<string>/Users/maximkrouk/Downloads</string>
 			<key>AWDS Tab Option</key>
 			<string>Yes</string>
 			<key>AWDS Window Directory</key>
-			<string>/Users/japanese_goblinn/Downloads</string>
+			<string>/Users/maximkrouk/Downloads</string>
 			<key>AWDS Window Option</key>
 			<string>Yes</string>
 			<key>Allow Title Setting</key>
@@ -3762,7 +3762,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/japanese_goblinn/Downloads</string>
+			<string>/Users/maximkrouk/Downloads</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -3774,11 +3774,11 @@
 			<key>AWDS Pane Option</key>
 			<string>Recycle</string>
 			<key>AWDS Tab Directory</key>
-			<string>/Users/japanese_goblinn/Developer</string>
+			<string>/Users/maximkrouk/Developer</string>
 			<key>AWDS Tab Option</key>
 			<string>Yes</string>
 			<key>AWDS Window Directory</key>
-			<string>/Users/japanese_goblinn/Developer</string>
+			<string>/Users/maximkrouk/Developer</string>
 			<key>AWDS Window Option</key>
 			<string>Yes</string>
 			<key>Allow Title Setting</key>
@@ -4737,7 +4737,7 @@
 			<key>Window Type</key>
 			<integer>2</integer>
 			<key>Working Directory</key>
-			<string>/Users/japanese_goblinn/Downloads</string>
+			<string>/Users/maximkrouk/Downloads</string>
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
