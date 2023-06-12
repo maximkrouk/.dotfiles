@@ -21,7 +21,7 @@ alias b="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/
 
 # Navigation
 alias ..="cd .."
-alias ...="cd ../../"
+alias ...="cd ../../" 
 alias dev="cd ~/Developer"
 alias dw="cd ~/Downloads"
 alias dtf="cd ~/.dotfiles"

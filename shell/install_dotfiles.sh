@@ -13,7 +13,9 @@ function brew_install() {
   _print_info "\nRunning brew install phase..."
   
   if ! _is_installed "brew"; then
-    /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )" 
+    /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh )"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/maximkrouk/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
   
   # GUI apps
@@ -75,32 +77,10 @@ function configs_install() {
   _print_warning "GitHub Token setup needed"
   ln -sF "$DOTFILES_CONFIG_PATH/git/.gitconfig" "$HOME/.gitconfig" 
   ln -sF "$DOTFILES_CONFIG_PATH/git/.github_token" "$HOME/.github_token"
-  ln -sF "$DOTFILES_CONFIG_PATH/git/.gitignore" "$HOME/.gitignore" 
-  
-  # run crontab
-  crontab "$DOTFILES_CONFIG_PATH/auto_backups/crontab.txt" && crontab -l 
-      
-  # vscode
-  local VSCODE_PATH="$DOTFILES_CONFIG_PATH/vscode/"
-  xargs -L1 code --install-extension < "$VSCODE_PATH/extensions.txt"
-  ln -sF "$VSCODE_PATH/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  ln -sF "$VSCODE_PATH/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-    
-  # iterm2
-  _print_warning "iTerm needs manual install of config"
-  mk "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/"
-  ln -sF "$DOTFILES_CONFIG_PATH/iterm/auto_dark_mode.py" "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/auto_dark_mode.py"
+  ln -sF "$DOTFILES_CONFIG_PATH/git/.gitignore" "$HOME/.gitignore"
 
   # color picker
   cp "$DOTFILES_CONFIG_PATH/color_picker/Color Picker.app" "/Applications"
-
-  # sublime 
-  ln -sF "$DOTFILES_CONFIG_PATH/sublime/sublime-profiles/" "$HOME/Library/Application Support/Sublime Text/Packages/"
-  ln -sF "$DOTFILES_CONFIG_PATH/sublime/User" "$HOME/Library/Application Support/Sublime Text/Packages/"
-
-  # sublime merge
-  _print_success "Installing CLI tool of Sublime Merge..."
-  sudo ln -sF "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" "/usr/local/bin"
 
   # lazygit
   _lazygit_config
@@ -132,6 +112,7 @@ dotfiles_install
 brew_install
 tools_install
 configs_install
+additional_setup
 
 source "$HOME/.zshrc"
 
